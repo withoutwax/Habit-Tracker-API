@@ -11,8 +11,7 @@ const router = express.Router();
 app.use(cors());
 
 // Initializing MongoDB database
-const dbRoute = 'mongodb+srv://withoutwax:weUdFlN0i8hzyQPf@personal-kucbv.gcp.mongodb.net/test?retryWrites=true&w=majority';
-mongoose.connect(dbRoute, { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://withoutwax:weUdFlN0i8hzyQPf@personal-kucbv.gcp.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 let db = mongoose.connection;
 db.once('opne', () => console.log("Connected to the database"));
